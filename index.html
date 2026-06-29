@@ -177,7 +177,7 @@ margin-top: 10px;
                 <ul>
                     <li><a href="info.html">🏢Animal Infomation</a></li>
                     <li><a href="about.html">About us</a></li>
-                    <li><a href="contact.html">Contact us</a></li>
+                    <li><a href="contact.html">📞Contact us</a></li>
                 </ul>
             </nav>
             <!-- Highlight contents -->
@@ -208,7 +208,17 @@ margin-top: 10px;
          </main>
          <script>
             function tiger() {
-                let para = document.getElementById
+                let para = document.getElementById("tiger-info");
+                para.style.display = "block";
+                para.innerHTML =
+                    "the tiger (panthera tigris) is the largest living cat species. It is a strong and powerful predator, usually found in forests and grasslands of Asia.";
+            }
+            function lion() {
+                let para = document.getElementById("lion-info");
+                para.style.display = "block";
+                para.innerHTML =
+                    "the lion (panthera leo) is known as the 'king of the jungle'. They live in groups called prides and are found in Africa and India.";
+            }
          </script>
                 
        </body>

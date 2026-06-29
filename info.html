@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    
+        <title>Animal Information</title>
+    
+        <style>
+            body {
+    
+                font-family: Arial;
+    
+                margin: 0;
+    
+                text-align: center;
+    
+                background: #f4f4f4;
+    
+            }
+    
+            /* Top menu */
+    
+            nav {
+    
+                background: #333;
+    
+                padding: 10px;
+    
+            }
+    
+            nav a {
+    
+                color: white;
+    
+                margin: 15px;
+    
+                text-decoration: none;
+    
+            }
+    
+            nav a:hover {
+    
+                background: orange;
+    
+                padding: 5px;
+    
+                border-radius: 5px;
+    
+            }
+    
+            /* Slider */
+    
+            .slider {
+    
+                padding: 30px;
+    
+            }
+    
+            img {
+    
+                border-radius: 10px;
+    
+            }
+    
+            button {
+    
+                padding: 10px;
+    
+                margin: 5px;
+    
+                background: blue;
+    
+                color: white;
+    
+                border: none;
+    
+                border-radius: 5px;
+    
+            }
+        </style>
+    
+    </head>
+
+    <body>
+
+        <!-- Menu -->
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="contact.html">Contact Us</a>
+        </nav>
+
+        <h1>Animal Gallery</h1>
+
+        <!-- Slider -->
+        <div class="slider">
+            <img id="slide" src="tiger.avif" width="400" height="250">
+            <br><br>
+
+            <button onclick="Prev()">←</button>
+            <button onclick="Next()">→</button>
+        </div>
+
+        <script>
+            var images = ["Tiger.avif", "Lion.jpg"];
+            let i = 0;
+
+            function Next() {
+                i++;
+                if (i >= images.length) {
+                    i = 0;
+                }
+                document.getElementById("slide").src = images[i];
+            }
+
+            function Prev() {
+                i--;
+                if (i < 0) {
+                    i = images.length - 1;
+                }
+                document.getElementById("slide").src = images[i];
+            }
+
+            /* Auto slide */
+            setInterval(Next, 3000);
+        </script>
+    </body>
+</html>
