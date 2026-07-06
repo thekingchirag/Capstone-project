@@ -1,0 +1,214 @@
+<html>
+<head>
+
+    <title>About Us - Animal World</title>
+
+    <style>
+        body {
+
+            margin: 0;
+
+            font-family: Arial, sans-serif;
+
+            background-color: #f4f4f4;
+
+        }
+
+        /* Navbar */
+
+        nav {
+
+            background-color: black;
+
+            padding: 15px;
+
+            text-align: center;
+
+        }
+
+        nav a {
+
+            color: white;
+
+            margin: 20px;
+
+            text-decoration: none;
+
+            font-weight: bold;
+
+        }
+
+        nav a:hover {
+
+            color: yellow;
+
+        }
+
+        /* Hero Section */
+
+        .hero {
+
+            background: url('https://images.unsplash.com/photo-1501706362039-c6e13f1d1e8f');
+
+            background-size: cover;
+
+            background-position: center;
+
+            color: white;
+
+            padding: 100px 20px;
+
+            text-align: center;
+
+        }
+
+        .hero h1 {
+
+            font-size: 50px;
+
+        }
+
+        .hero p {
+
+            font-size: 20px;
+
+        }
+
+        /* Section */
+
+        .section {
+
+            padding: 40px;
+
+            text-align: center;
+
+        }
+
+        .card {
+
+            background: white;
+
+            width: 70%;
+
+            margin: 20px auto;
+
+            padding: 20px;
+
+            border-radius: 10px;
+
+            box-shadow: 0px 0px 10px gray;
+
+        }
+
+        /* Button */
+
+        button {
+
+            padding: 10px 20px;
+
+            background: orange;
+
+            border: none;
+
+            color: white;
+
+            font-size: 16px;
+
+            border-radius: 5px;
+
+            cursor: pointer;
+
+        }
+
+        button:hover {
+
+            background: darkorange;
+
+        }
+
+        /* Hidden content */
+
+        #more {
+
+            display: none;
+
+        }
+
+        /* Footer */
+
+        footer {
+
+            background: black;
+
+            color: white;
+
+            text-align: center;
+
+            padding: 15px;
+
+            margin-top: 20px;
+
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav>
+
+        <a href="index.html">Home</a>
+        <a href="contact.html">Contact</a>
+        <a href="info.html">Info</a>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero">
+        <h1>About Animal World</h1>
+        <p>Discover the wonders of the animal kingdom!</p>
+    </div>
+
+    <!-- About Section -->
+     <div class="section">
+
+        <div class="card">
+            <h2>Who We Are</h2>
+            <p>Animal World is a platform dedicated to educating and inspiring people about the diverse species that inhabit our planet. We aim to foster a deeper understanding and appreciation for wildlife through engaging content and interactive experiences.</p>
+        </div>
+
+        <div class="card">
+            <h2>Our Mission</h2>
+            <p>At Animal World, our mission is to educate and inspire people about the diverse species that inhabit our planet. We aim to promote conservation and awareness through engaging content and interactive experiences.</p>
+        </div>
+
+        <div class="card">
+            <h2>More about us</h2>
+            <p id="text">We are passionate about wildlife and strive to provide accurate and up-to-date information about various animal species.
+            <span id="more"> Our team of experts and enthusiasts work tirelessly to create content that is both informative and engaging, ensuring that our audience gains a comprehensive understanding of the animal kingdom.</span></p>
+
+            <button onclick="showmore()" id="myBtn">Read More</button>
+        </div>
+     </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>Copyright 2026 Animal World | All Rights Reserved.</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        function showmore() {
+            var moreText = document.getElementById("more");
+            var btnText = document.getElementById("myBtn");
+
+            if (moreText.style.display === "none") {
+                moreText.style.display = "inline";
+                btnText.innerHTML = "Read Less";
+            } else {
+                moreText.style.display = "none";
+                btnText.innerHTML = "Read More";
+            }
+        }
+    </script>
+</body>
+</html>
